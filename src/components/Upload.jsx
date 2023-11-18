@@ -128,14 +128,18 @@ const Upload = ({ setOpen }) => {
 
   useEffect(() => {
     video && uploadFile(video , "videoUrl");
+    
   }, [video]);
 
   useEffect(() => {
     img && uploadFile(img, "imgUrl");
+    
   }, [img]);
 
   const handleUpload = async (e)=>{
     e.preventDefault();
+    // console.log(inputs)
+    // console.log(tags)
     const res = await axios.post("/videos", {...inputs, tags})
     setOpen(false)
     res.status===200 && navigate(`/video/${res.data._id}`)
@@ -171,7 +175,7 @@ const Upload = ({ setOpen }) => {
         <Input
           type="text"
           placeholder="Separate the tags with commas."
-          onChance={handleTags}
+          onChange={handleTags}
         />
         <Label>Image:</Label>
         {imgPerc > 0 ? (
