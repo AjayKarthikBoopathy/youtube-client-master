@@ -156,7 +156,7 @@ const Video = () => {
   };
 
   //TODO: DELETE VIDEO FUNCTIONALITY
-
+if (currentVideo) {
   return (
     <Container>
       <Content>
@@ -216,6 +216,8 @@ const Video = () => {
       <Recommendation tags={currentVideo.tags} />
     </Container>
   );
+}
+  
 };
 
 export default Video;

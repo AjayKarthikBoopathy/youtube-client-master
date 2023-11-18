@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from 'redux-persist/integration/react';
 import axios from 'axios';
 axios.defaults.baseURL = "https://youtube-backend-master.onrender.com/api/"
-
+axios.defaults.withCredentials = true;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
