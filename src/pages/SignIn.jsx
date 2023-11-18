@@ -76,11 +76,25 @@ const SignIn = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
 
+  // Signin
   const handleLogin = async (e) => {
     e.preventDefault();
     dispatch(loginStart());
     try {
       const res = await axios.post("/auth/signin", { name, password });
+      dispatch(loginSuccess(res.data));
+      navigate("/")
+    } catch (err) {
+      dispatch(loginFailure());
+    }
+  };
+
+  // Signup
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    dispatch(loginStart());
+    try {
+      const res = await axios.post("/auth/signup", { name, password, email });
       dispatch(loginSuccess(res.data));
       navigate("/")
     } catch (err) {
@@ -140,7 +154,7 @@ const SignIn = () => {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button>Sign up</Button>
+        <Button onClick={handleSignup}>Sign up</Button>
       </Wrapper>
       <More>
         English(India)
