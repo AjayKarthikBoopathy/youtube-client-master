@@ -139,8 +139,8 @@ const Menu = ({ darkMode, setDarkMode }) => {
             <Hr />
           </>
         }
-        <Title>BEST OF YOUTUBE</Title>
-        <Item>
+        {/* <Title>BEST OF YOUTUBE</Title> */}
+        {/* <Item>
           <LibraryMusicOutlinedIcon />
           Music
         </Item>
@@ -163,8 +163,10 @@ const Menu = ({ darkMode, setDarkMode }) => {
         <Item>
           <LiveTvOutlinedIcon />
           Live
-        </Item>
-        <Hr />
+        </Item> */}
+
+        {/* <Hr /> */}
+
         <Item>
           <SettingsOutlinedIcon />
           Settings
@@ -173,10 +175,11 @@ const Menu = ({ darkMode, setDarkMode }) => {
           <FlagOutlinedIcon />
           Report
         </Item>
-        <Item>
+        {/* <Item>
           <HelpOutlineOutlinedIcon />
           Help
-        </Item>
+        </Item> */}
+        <Hr />
         <Item onClick={() => setDarkMode(!darkMode)}>
           <SettingsBrightnessOutlinedIcon />
           {darkMode ? "Light" : "Dark"} Mode
