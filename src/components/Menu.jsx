@@ -128,7 +128,7 @@ const Menu = ({ darkMode, setDarkMode }) => {
         {!currentUser &&
           <>
             <Login>
-              Sign in to like videos, comment, and subscribe.
+              Sign in to watch, like, comment, and subscribe videos.
               <Link to="signin" style={{ textDecoration: "none" }}>
                 <Button>
                   <AccountCircleOutlinedIcon />
