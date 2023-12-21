@@ -13,8 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
-  // height: 100%;
-  height: 600px;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -24,16 +23,28 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+// const Wrap = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background-color: #000000a7;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;
+
 const Wrapper = styled.div`
   width: 600px;
-  height: 580px;
+  height: 600px;
   background-color: ${({ theme }) => theme.bgLighter};
   color: ${({ theme }) => theme.text};
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: relative;
+  position: fixed;
 `;
 const Close = styled.div`
   position: absolute;
