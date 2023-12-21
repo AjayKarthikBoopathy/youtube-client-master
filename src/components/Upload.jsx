@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: #000000a7;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: fixed;
+  position: relative;
 `;
 const Close = styled.div`
   position: absolute;
