@@ -12,9 +12,9 @@ import { useNavigate } from "react-router-dom";
 
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 98%;
+  height: 98%;
+  position: static;
   top: 0;
   left: 0;
   background-color: #000000a7;
