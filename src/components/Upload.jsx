@@ -12,9 +12,10 @@ import { useNavigate } from "react-router-dom";
 
 
 const Container = styled.div`
-  width: 98%;
-  height: 98%;
-  position: static;
+  width: 100%;
+  // height: 100%;
+  height: 600px;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: #000000a7;
@@ -25,7 +26,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   width: 600px;
-  height: 600px;
+  height: 580px;
   background-color: ${({ theme }) => theme.bgLighter};
   color: ${({ theme }) => theme.text};
   padding: 20px;
