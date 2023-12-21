@@ -47,7 +47,8 @@ function App() {
                     element={currentUser ? <Home /> : <SignIn />}
                   />
                   <Route path="video">
-                    <Route path=":id" element={<Video />} />
+                    {/* <Route path=":id" element={<Video />} /> */}
+                    <Route path=":id" element={currentUser ? <Video /> : <SignIn />} />
                   </Route>
                 </Route>
               </Routes>
